@@ -2,6 +2,6 @@
 
 Primero se debe clonar el template de proyecto desde el sitio de SIU Toba
 
-...shell
-https://github.com/SIU-Toba/template-proyecto-toba.git
-...
+```shell
+git clone https://github.com/SIU-Toba/template-proyecto-toba.git ./toba
+```
