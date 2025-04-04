@@ -7,22 +7,21 @@ FROM debian:bookworm-slim
 RUN apt update && apt upgrade -y && apt autoremove -y
 
 # Install required packages
-RUN apt install apache2 composer libapache2-mod-php${PHP_VERSION} npm git -y
+RUN apt install apache2 composer libapache2-mod-php8.2 npm git -y
 
 # Install Yarn
 RUN npm install --global yarn
 
 # Install PHP extensions
 RUN apt install -y \
-    php${PHP_VERSION}-cli \
-    php${PHP_VERSION}-curl \    
-    php${PHP_VERSION}-gd \
-    php${PHP_VERSION}-mbstring \
-    php${PHP_VERSION}-pdo \
-    php${PHP_VERSION}-pdo_pgsql \
-    php${PHP_VERSION}-xml \
-    php${PHP_VERSION}-zip \
-    && apt clear
+    php8.2-cli \
+    php8.2-curl \    
+    php8.2-gd \
+    php8.2-mbstring \
+    php8.2-pdo \
+    php8.2-pgsql \
+    php8.2-xml \
+    php8.2-zip 
 
 # Set the working directory
 WORKDIR /var/www
